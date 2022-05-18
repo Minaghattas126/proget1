@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Menu</title>
+	<style type="text/css">
+			* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    body{
+    	font-family: sans-serif;
+        }
+    h2 {
+	font-weight: 400;
+	font-size: 38px;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+}
+    h2::after {
+	position: absolute;
+	content: "";
+	background: #d43031;
+	height: 2px;
+	width: 70px;
+	bottom: 0;
+	margin-left: -35px;
+	left: 50%;
+}
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover {
+   color: red;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;s
+    }
+</style>
+</head>
+<body>
+<nav class="navbar">
+	<div class="brand-title" style="font-family: sans-serif; color: red;">GUSTO RESTURANT</div>
+	 <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+        	<ul>
+	<li><a href="page 2.html">HOME</a></li>
+	<li><a href="page 3.html" style="color: red;">MENU</a></li>
+	<li><a href="page 4.html">CHEFF</a></li>
+	<li><a href="page 5.html">CONTACT</a></li>
+</ul>
+</div>
+</nav>
+<script type="text/javascript">
+	const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+</script>
+<h2 style="text-align: center;">MENU</h2><br><br><br>
+<div style="text-align: center;">
+	<div>
+        <h2>BREAKFAST & STARTERS </h2><br><br>
+		<h3>Tortellini Skewers $9</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Fried Ravioli $7</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Wild Mushroom Arancini $9</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Mozzarella Sticks $10</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+	</div><br><br>
+	<div>
+		<h2>MAIN COURSE</h2><br><br>
+		<h3>Roast Stuffed Chicken $18</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Chicken & Mushroom Pasta $20</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Beef Lasagne $14</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br><br>
+		<h3>Chicken Goujons $19</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	</div><br><br>
+	<div>
+		<h2>DINNER</h2>
+		<h3>Sesame-Ginger Beef $15</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Crispy Fried Chicken $17</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Mongolian Shrimp & Broccoli $18</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Spicy Coconut Salmon $20</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	</div><br><br>
+	<div>
+		<h2>DESSERTS</h2>
+		<h3>Chocolate Mud Cake $11</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Bourbon-Pecan Tart $14</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Texas Sheet Cake $15</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p><br><br>
+		<h3>Vanilla CheesecakeVanilla Cheesecake $18</h3><br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	</div>
+</div><br><br><br>
+<div style="text-align:center;">
+<img src="01.jpg">
+<img src="02.jpg">
+<img src="03.jpg">
+<img src="04.jpg">
+</div>
+</body>
+</html>
